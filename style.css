@@ -466,9 +466,9 @@
       .cards-somos {
         gap: 1rem;
       }
-      .card-somos {
+      /* .card-somos {
         flex: 0 0 90px;
-        height: 90px; /* Mantém a proporção de círculo */
+        height: 90px; Mantém a proporção de círculo */
       }
       /* Reduz ainda mais o selo "Alinny" em telas muito pequenas */
       .alinny-mark {
