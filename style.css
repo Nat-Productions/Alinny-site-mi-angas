@@ -445,6 +445,11 @@
         width: 36px;
         height: 36px;
       }
+
+      .card-somos ion-icon {
+        font-size: 36px;
+      }
+
       /* Reduz o tamanho do selo "Alinny" em telas menores */
       .alinny-mark {
         padding: 0.25rem 0.4rem;
@@ -488,6 +493,10 @@
       .card-somos svg {
         width: 32px;
         height: 32px;
+      }
+
+      .card-somos ion-icon {
+        font-size: 36px;
       }
   
       /* Reduz ainda mais o selo "Alinny" em telas muito pequenas */
