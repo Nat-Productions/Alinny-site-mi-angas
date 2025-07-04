@@ -1,0 +1,485 @@
+*, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background-color: #f2f0e8;
+      color: #5a5049;
+      line-height: 1.4;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      min-height: 100vh;
+    }
+    a {
+      color: #5a5049;
+      text-decoration: none;
+      cursor: pointer;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      color: #3c362f;
+      outline: none;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto 3rem;
+      padding: 0 1rem;
+    }
+
+    /* Alinny Logo Mark */
+    .alinny-mark {
+      display: inline-block;
+      border: 1px solid #5a5049;
+      border-radius: 25% / 15%;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.3rem 0.5rem;
+      letter-spacing: 0.1em;
+      font-family: "Courier New", Courier, monospace;
+      user-select: none;
+    }
+
+    /* Sparkle decorations */
+    .sparkle {
+      display: inline-block;
+      margin-left: 0.4rem;
+      font-family: serif;
+      font-weight: 300;
+      font-style: normal;
+      color: #7a7166;
+      transform: rotate(15deg);
+      user-select: none;
+    }
+
+    .section-title {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #5a5049;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    /* Horizontal line after logo mark and before title text */
+    .section-title:before {
+      content: "";
+      flex-grow: 1;
+      border-bottom: 1px solid #5a5049;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      opacity: 0.4;
+    }
+
+    /* === Section: Coleção Única - top === */
+    .top-section {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #f2f0e8;
+      border-radius: 8px;
+      box-shadow: 0 0 14px rgb(90 80 73 / 0.1);
+      overflow: hidden;
+      margin-bottom: 3rem;
+    }
+    .top-left {
+      flex: 1 1 350px;
+      padding: 3rem 3rem 3rem 2.5rem;
+      position: relative;
+    }
+    .top-left .alinny-mark {
+      border-color: #a89d91;
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    .top-left h1 {
+      font-size: 3rem;
+      margin: 0 0 0.25rem 0;
+      font-weight: 600;
+      font-family: serif;
+      user-select: text;
+      color: #5a5049;
+    }
+    .top-left p {
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.1rem;
+      margin: 0 0 1.6rem 0;
+      color: #7a7166;
+      user-select: none;
+    }
+    .btn-know {
+      border: 1px solid #5a5049;
+      border-radius: 20px;
+      background: transparent;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.9rem;
+      font-style: italic;
+      transition: all 0.3s ease;
+      display: inline-block;
+      cursor: pointer;
+      user-select: none;
+    }
+    .btn-know:hover,
+    .btn-know:focus {
+      background-color: #5a5049;
+      color: #f2f0e8;
+      outline-offset: 3px;
+      outline-color: #5a5049;
+    }
+
+    .slide-right {
+      flex: 1 1 350px;
+      background-color: #e6e2d9;
+      position: relative;
+      aspect-ratio: 4 / 3;
+      /* This is the viewport for the animation, it hides the overflowing content */
+      overflow: hidden;
+    }
+
+    /* Defines the movement of the slide from start to end */
+    @keyframes scroll-animation {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        /* Moves the strip to the left by the width of the original set of images (50% of the total width) */
+        transform: translateX(-50%);
+      }
+    }
+
+    .slide-paginas {
+      /* Use flex to line up images horizontally */
+      display: flex;
+      /* Total width is 600% because we have 3 original images + 3 clones, and each should fill the viewport */
+      width: 600%;
+      height: 100%;
+      /* Apply the animation. Adjust the duration (e.g., 30s) to change speed. */
+      animation: scroll-animation 30s linear infinite;
+    }
+
+    /* Pause the animation on hover for better user experience */
+    .slide-right:hover .slide-paginas {
+      animation-play-state: paused;
+    }
+
+    .slide-paginas img {
+      /* Each image takes up 1/6th of the total .slide-paginas width */
+      width: calc(100% / 6);
+      height: 100%;
+      object-fit: cover;
+      user-select: none;
+    }
+
+
+    /* === Section: Somos === */
+    .section-somos {
+      background-color: #f2f0e8;
+      padding: 1rem 0 3rem;
+      text-align: center;
+    }
+    .section-somos .alinny-mark {
+      margin-bottom: 0.6rem;
+      border-color: #5a5049;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .section-somos h2 {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 2rem;
+      color: #5a5049;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      user-select: none;
+    }
+    .cards-somos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem 3rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .card-somos {
+      background-color: #5a5049;
+      color: #f2f0e8;
+      border-radius: 50%;
+      width: 130px;
+      height: 130px;
+      padding: 0.6rem 1rem 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.7rem;
+      user-select: none;
+      box-shadow: 0 0 8px rgba(90, 80, 73, 0.25);
+      transition: background-color 0.3s ease;
+    }
+    .card-somos svg {
+      width: 42px;
+      height: 42px;
+      margin-bottom: 0.35rem;
+      stroke: #f2f0e8;
+      stroke-width: 1.5;
+      fill: none;
+      pointer-events: none;
+    }
+    .card-somos:hover,
+    .card-somos:focus {
+      background-color: #7a7166;
+      outline: 2px solid #5a5049;
+      outline-offset: 3px;
+    }
+    .card-somos span {
+      font-weight: 500;
+      color: #ddd7cd;
+      font-family: "Arial Narrow", Arial, sans-serif;
+      letter-spacing: 0.02em;
+    }
+
+    /* === Section: Criações (brown background) === */
+    .section-criacoes {
+      background-color: #6e645a;
+      color: #ddd7cd;
+      padding: 3rem 0 4rem;
+    }
+    .section-criacoes .alinny-mark {
+      border-color: #ddd7cd;
+      color: #ddd7cd;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+      user-select: none;
+    }
+    .section-criacoes h2 {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 2.5rem;
+      text-align: center;
+      user-select: none;
+    }
+
+    .r-produtos-content {
+      /* Compensa o padding do .container para a faixa rolável ir de ponta a ponta */
+      margin: 0 -1rem;
+    }
+
+    .roll-produtos {
+      display: flex;
+      gap: 1.5rem;
+      overflow-x: auto;
+      padding: 1rem 1rem 2rem; /* Espaço para scrollbar, sombra e padding do container */
+      -webkit-overflow-scrolling: touch; /* Melhora a experiência de scroll em touch */
+      scrollbar-width: none; /* Firefox */
+    }
+    .roll-produtos::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
+    .card {
+      flex: 0 0 280px; /* Não encolhe, não cresce, base de 280px */
+      background-color: #f2f0e8;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(22, 18, 13, 0.2);
+      overflow: hidden;
+      text-align: left;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      color: #5a5049; /* Reseta a cor herdada da seção */
+    }
+
+    .card:hover,
+    .card:focus-within {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(22, 18, 13, 0.3);
+      outline: none;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      background-color: #6e645a;
+      display: block;
+    }
+
+    .card h3 {
+      font-family: 'Georgia', serif;
+      font-style: normal;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 1rem 1rem 0.25rem;
+    }
+
+    .card .price {
+      font-family: 'Georgia', serif;
+      font-size: 1rem;
+      font-weight: bold;
+      margin: 0 1rem 0.5rem;
+    }
+
+    .card .availability {
+      font-family: 'Arial Narrow', Arial, sans-serif;
+      font-size: 0.8rem;
+      color: #7a7166;
+      margin: 0 1rem 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* === Section: Penumbra - last === */
+    .section-penumbra {
+      background-color: #f2f0e8;
+      padding: 3rem 0 6rem;
+      user-select: none;
+    }
+    .section-penumbra .alinny-mark {
+      margin-bottom: 0.6rem;
+      border-color: #5a5049;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    .section-penumbra h2 {
+      font-style: italic;
+      font-weight: 400;
+      font-size: 2rem;
+      color: #5a5049;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      text-align: center;
+      user-select: none;
+    }
+    .penumbra-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+      grid-auto-rows: 140px;
+      gap: 1rem;
+    }
+    .penumbra-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgb(22 18 13 / 0.25);
+      background: #aaa;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .penumbra-grid img:hover,
+    .penumbra-grid img:focus {
+      transform: scale(1.07);
+      outline-offset: 4px;
+      outline: 2px solid #5a5049;
+    }
+
+    /* Text below images in penumbra */
+    .penumbra-text-left,
+    .penumbra-text-right {
+      font-family: 'Arial Narrow', Arial, sans-serif;
+      font-size: 0.75rem;
+      color: #5a5049;
+      user-select: text;
+      margin-top: 0.4rem;
+    }
+    /* Text aligned left or right for distinct blocks */
+    .penumbra-text-left {
+      text-align: left;
+    }
+    .penumbra-text-right {
+      text-align: right;
+      font-style: italic;
+      font-weight: 600;
+    }
+
+    /* Responsive Typography */
+    @media (max-width: 768px) {
+      body {
+        font-size: 16px;
+      }
+      .top-section {
+        flex-direction: column;
+      }
+      .top-left {
+        padding: 2rem 1.5rem;
+      }
+      .top-left h1 {
+        font-size: 2.25rem;
+      }
+      .section-somos h2,
+      .section-criacoes h2,
+      .section-penumbra h2 {
+        font-size: 1.6rem;
+      }
+      .cards-somos {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 1.5rem;
+        padding-bottom: 1rem;
+      }
+      .card-somos {
+        flex: 0 0 110px;
+        height: 110px;
+      }
+      /* Reduz o tamanho do selo "Alinny" em telas menores */
+      .alinny-mark {
+        padding: 0.25rem 0.4rem;
+        font-size: 0.6rem;
+      }
+      .top-left .alinny-mark {
+        font-size: 0.65rem;
+      }
+      .section-somos .alinny-mark,
+      .section-criacoes .alinny-mark,
+      .section-penumbra .alinny-mark {
+        font-size: 0.7rem;
+      }
+      .r-produtos-content {
+        margin: 0; /* Remove a margem negativa em telas menores */
+      }
+      .penumbra-grid {
+        grid-template-columns: repeat(auto-fit,minmax(110px,1fr));
+        grid-auto-rows: 110px;
+      }
+    }
+    @media (max-width: 400px) {
+      .top-left {
+        padding: 1.5rem 1rem;
+      }
+      .top-left h1 {
+        font-size: 1.8rem;
+      }
+      .btn-know {
+        padding: 0.4rem 1rem;
+        font-size: 0.85rem;
+      }
+      .cards-somos {
+        gap: 1rem;
+      }
+      .card-somos {
+        flex: 0 0 90px;
+        height: 90px;
+      }
+      /* Reduz ainda mais o selo "Alinny" em telas muito pequenas */
+      .alinny-mark {
+        font-size: 0.55rem;
+        padding: 0.2rem 0.35rem;
+      }
+      .top-left .alinny-mark {
+        font-size: 0.6rem;
+      }
+      .section-somos .alinny-mark,
+      .section-criacoes .alinny-mark,
+      .section-penumbra .alinny-mark {
+        font-size: 0.65rem;
+      }
+    }
