@@ -230,6 +230,14 @@
       fill: none;
       pointer-events: none;
     }
+
+.card-somos ion-icon {
+    font-size: 38px;
+    margin-bottom: 0.35rem;
+    color: #f2f0e8;
+    pointer-events: none;
+}
+
     .card-somos:hover,
     .card-somos:focus {
       background-color: #7a7166;
