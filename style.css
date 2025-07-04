@@ -208,8 +208,8 @@
       background-color: #5a5049;
       color: #f2f0e8;
       border-radius: 50%;
-      width: 130px; /* Define a largura fixa */
-      height: 130px; /* Define a altura fixa para garantir um círculo */
+      width: 130px;
+      aspect-ratio: 1 / 1;
       padding: 1rem;
       display: flex;
       flex-direction: column;
@@ -238,7 +238,6 @@
     .card-somos span {
       font-weight: 500;
       color: #ddd7cd;
-      text-align: center; /* Garante que o texto quebre de forma centralizada */
       font-family: "Arial Narrow", Arial, sans-serif;
       letter-spacing: 0.02em;
     }
@@ -429,7 +428,6 @@
       }
       .card-somos {
         flex: 0 0 110px;
-        height: 110px; /* Mantém a proporção de círculo */
       }
       /* Reduz o tamanho do selo "Alinny" em telas menores */
       .alinny-mark {
@@ -468,7 +466,6 @@
       }
       .card-somos {
         flex: 0 0 90px;
-        height: 90px; /* Mantém a proporção de círculo */
       }
       /* Reduz ainda mais o selo "Alinny" em telas muito pequenas */
       .alinny-mark {
