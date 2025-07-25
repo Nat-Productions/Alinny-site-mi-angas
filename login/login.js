@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (username === 'adm' && password === 'adm') {
       // Se correto, redireciona para a página principal
       loginContainer.classList.remove('form-error');
-      // O caminho '../index.html' assume que a pasta 'login' está dentro de 'alinny-site'
-      window.location.href = '../index.html';
+      // O caminho agora aponta para o novo nome da página principal: home.html
+      window.location.href = 'home.html';
     } else {
       // Se incorreto, exibe a mensagem de erro
       errorMessageElement.textContent = 'Login ou senha errados, tente novamente ou clique em "esqueci minha senha"';
