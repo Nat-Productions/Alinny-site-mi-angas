@@ -4,7 +4,7 @@
     body {
       margin: 0;
       font-family: 'Georgia', serif;
-      background-color: #f0e4d0;
+      background-color: #f2f0e8;
       color: #5a5049;
       line-height: 1.4;
       -webkit-font-smoothing: antialiased;
@@ -78,7 +78,7 @@
     .top-section {
       display: flex;
       flex-wrap: wrap;
-      background-color: #f4ebdd;
+      background-color: #f2f0e8;
       border-radius: 8px;
       box-shadow: 0 0 14px rgb(90 80 73 / 0.1);
       overflow: hidden;
@@ -126,14 +126,14 @@
     .btn-know:hover,
     .btn-know:focus {
       background-color: #5a5049;
-      color: #f0e4d0;
+      color: #f2f0e8;
       outline-offset: 3px;
       outline-color: #5a5049;
     }
 
     .slide-right {
       flex: 1 1 350px;
-      background-color: #f0e4d0;
+      background-color: #e6e2d9;
       position: relative;
       aspect-ratio: 4 / 3;
       /* This is the viewport for the animation, it hides the overflowing content */
@@ -177,7 +177,7 @@
 
     /* === Section: Somos === */
     .section-somos {
-      background-color: #f0e4d0;
+      background-color: #f2f0e8;
       padding: 1rem 0 3rem;
       text-align: center;
     }
@@ -207,7 +207,7 @@
     }
     .card-somos {
       background-color: #5a5049;
-      color: #f0e4d0;
+      color: #f2f0e8;
       border-radius: 50%;
       width: 120px; /* Tamanho reduzido para telas maiores */
       height: 120px; /* Mantém o círculo perfeito */
@@ -347,7 +347,7 @@
 
     /* === Section: Penumbra - last === */
     .section-penumbra {
-      background-color: #f0e4d0;
+      background-color: #f2f0e8;
       padding: 3rem 0 6rem;
       user-select: none;
     }
@@ -381,7 +381,7 @@
       object-fit: cover;
       border-radius: 6px;
       box-shadow: 0 2px 8px rgb(22 18 13 / 0.25);
-      background: #f0e4d0;
+      background: #aaa;
       transition: transform 0.3s ease;
       cursor: default;
     }
