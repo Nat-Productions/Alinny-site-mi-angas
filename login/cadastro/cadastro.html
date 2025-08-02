@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criar Conta - Alinny</title>
+  <link rel="stylesheet" href="cadastro.css">
+</head>
+<body>
+  <div class="login-container">
+    <h1>Crie sua conta</h1>
+    <p id="error-message" class="error-message"></p>
+    <form id="cadastro-form">
+      <input type="text" id="name" placeholder="Nome completo" required>
+      <input type="text" id="username" placeholder="Email ou telefone" required>
+      <input type="password" id="password" placeholder="Senha" required>
+      <input type="password" id="confirm-password" placeholder="Confirmar senha" required>
+      <button type="submit" class="btn-submit">Criar Conta</button>
+    </form>
+    <a href="../login.html" class="switch-link">Já tem uma conta? Faça login</a>
+  </div>
+  <script src="cadastro.js"></script>
+</body>
+</html>
